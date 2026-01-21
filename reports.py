@@ -16,7 +16,6 @@ def generate_full_report(children: List[ChildRecord]) -> List[str]:
     sorted_children = sort_by_health_and_lastname(children)
 
     report = ["ПОЛНЫЙ СПИСОК ВСЕХ ДЕТЕЙ",
-              "=" * 50,
               "Сортировка: по убыванию количества здоровых заключений, "
               "по возрастанию фамилии",
               ""]
@@ -49,7 +48,6 @@ def generate_group_report(children: List[ChildRecord], group_type: GroupType) ->
     sorted_children = sort_by_birth_date(group_children)
 
     report = [f"СПИСОК ДЕТЕЙ {group_type.value.upper()} ГРУППЫ",
-              "=" * 50,
               "Сортировка: по дате рождения (год, месяц, день)",
               ""]
 
@@ -78,7 +76,6 @@ def generate_treatment_report(children: List[ChildRecord]) -> List[str]:
     sorted_children = sort_by_group_and_lastname(treatment_children)
 
     report = ["СПИСОК ДЕТЕЙ, НУЖДАЮЩИХСЯ В ЛЕЧЕНИИ",
-              "=" * 50,
               "Сортировка: по группе, по возрастанию фамилии",
               ""]
 
